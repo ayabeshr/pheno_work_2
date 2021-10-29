@@ -769,17 +769,19 @@ DemoAnalyzer::DemoAnalyzer(TTree *tree) : fChain(0)
 // used to generate this class and read the Tree.
    if (tree == 0) {
 	  //TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("media/aya/LinuxSpace/MyWork_Final_Samples/DY_BG_14TeV_SMfull_GEN/DY_BG_14TeV_SMfull_pythia8_CMSPhaseII-0PU_GEN-SIM.root");
-      //TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("/run/media/Aya/LinuxSpace/MyWork_Final_Samples/TTbar_BG_14TeV_SMfull_CMS_PhaseII_0PU_GEN_pythia8/TTbar_BG_14TeV_SMfull_pythia8_CMS_PhaseII_0PU_GEN-SIM.root");
+      //TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("/media/aya/LinuxSpace/MyWork_Final_Samples/TTbar_BG_14TeV_SMfull_CMS_PhaseII_0PU_GEN_pythia8/TTbar_BG_14TeV_SMfull_pythia8_CMS_PhaseII_0PU_GEN-SIM.root");
       //TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("/home/aya/Desktop/Pheno_Work/analysis/gg.root");
       //TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("/HEP_DATA/aya/gghhbb4M_20210908.root");
       //TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("/HEP_DATA/aya/gghhbb4M_offshellsyntax_20210911.root");
       //TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("/media/aya/LinuxSpace/Pheno_Work/gghhbb4M_offshellsyntax_20210911.root");
-      TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("/media/aya/LinuxSpace/Pheno_Work_2/analysis/gghhbb4M_AllDiagrams_20210915.root");
-      //TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("/media/aya/LinuxSpace/MyWork_Final_Samples/ZZto4Mu_BG_14TeV_SMfull_Pythia8_GEN/ZZto4MU_BG_14TeV_SMfull_pythia8_CMSPhaseII-0PU_GEN_SIM.root");
+      TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("/media/aya/PACKUP/Aya/final_analysis/inputs/ZZbb2Mu.root");
+     //TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("/media/aya/LinuxSpace/MyWork_Final_Samples/ZZto4Mu_BG_14TeV_SMfull_Pythia8_GEN/ZZto4MU_BG_14TeV_SMfull_pythia8_CMSPhaseII-0PU_GEN_SIM.root");
+     // TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("/home/aya/programs/Delphes-3.4.2/zwpbbmv_decayMadspin_test.root");
       
+
       if (!f || !f->IsOpen()) {
 		 //f = new TFile("/media/aya/LinuxSpace/MyWork_Final_Samples/DY_BG_14TeV_SMfull_GEN/DY_BG_14TeV_SMfull_pythia8_CMSPhaseII-0PU_GEN-SIM.root");
-         //f = new TFile("/run/media/Aya/LinuxSpace/MyWork_Final_Samples/TTbar_BG_14TeV_SMfull_CMS_PhaseII_0PU_GEN_pythia8/TTbar_BG_14TeV_SMfull_pythia8_CMS_PhaseII_0PU_GEN-SIM.root");
+        // f = new TFile("/media/aya/LinuxSpace/MyWork_Final_Samples/TTbar_BG_14TeV_SMfull_CMS_PhaseII_0PU_GEN_pythia8/TTbar_BG_14TeV_SMfull_pythia8_CMS_PhaseII_0PU_GEN-SIM.root");
          //f = new TFile("/media/aya/PACKUP/Aya/signal_20210831/BMP1_hh_bb_4Mu.root");
          //f = new TFile("/home/aya/programs/Delphes-3.4.2/sm_h_4Mu.root");
          //f = new TFile("/home/aya/programs/Delphes-3.4.2/sm_h_bb.root"); 
@@ -787,8 +789,9 @@ DemoAnalyzer::DemoAnalyzer(TTree *tree) : fChain(0)
          //f = new TFile("/HEP_DATA/aya/gghhbb4M_20210908.root"); 
          //f = new TFile("/HEP_DATA/aya/gghhbb4M_offshellsyntax_20210911.root");
          //f = new TFile("/media/aya/LinuxSpace/Pheno_Work/gghhbb4M_offshellsyntax_20210911.root"); 
-         f = new TFile("/media/aya/LinuxSpace/Pheno_Work_2/analysis/gghhbb4M_AllDiagrams_20210915.root"); 
+         f = new TFile("/media/aya/PACKUP/Aya/final_analysis/inputs/ZZbb2Mu.root"); 
          //f = new TFile("/media/aya/LinuxSpace/MyWork_Final_Samples/ZZto4Mu_BG_14TeV_SMfull_Pythia8_GEN/ZZto4MU_BG_14TeV_SMfull_pythia8_CMSPhaseII-0PU_GEN_SIM.root"); 
+         //f = new TFile("/home/aya/programs/Delphes-3.4.2/zwpbbmv_decayMadspin_test.root"); 
       }
       f->GetObject("Delphes",tree);
 
